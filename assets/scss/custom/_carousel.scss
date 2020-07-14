@@ -1,0 +1,44 @@
+// Bootstrap carousel
+.carousel-text {
+  .carousel-caption {
+    color: $default;
+    position: relative;
+    @extend blockquote;
+    padding-left: 0 !important;
+    border: none !important;
+    left: 0;
+    right: 0;
+  }
+  .carousel-indicators > li {
+    background-color: $gray;
+  }
+}
+
+.quotes {
+  @extend .mtb-6;
+  .row {
+    @extend .justify-content-md-center;
+  }
+}
+
+#carousel-quotes {
+  overflow-y: visible;
+  padding-top: 5rem;
+  &:before {
+    font-family: "DPv8-fonts";
+    content: "\e945";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 8rem;
+    color: $gray-400;
+    text-align: center;
+    line-height: 1;
+  }
+  .carousel-caption {
+    @extend blockquote;
+    padding-left: 0 !important;
+    border: none !important;
+  }
+}

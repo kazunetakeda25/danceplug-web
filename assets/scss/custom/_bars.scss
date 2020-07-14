@@ -1,0 +1,168 @@
+.bars {
+  position: absolute;
+  height: 11.25rem;
+  display: block;
+  z-index: 0;
+  span {
+    position: absolute;
+    display: block;
+    height: 3.75rem;
+    transform-origin: 50% 50%;
+  }
+  &.bars-right {
+    .bar-01 {
+      right: 3rem;
+    }
+    .bar-02 {
+      right: 7rem;
+    }
+    .bar-03 {
+      right: 10rem;
+    }
+    .bar-04 {
+      right: -5rem;
+    }
+    .bar-05 {
+      right: 2rem;
+    }
+  }
+  &.bars-left {
+    .bar-01 {
+      left: 3rem;
+    }
+    .bar-02 {
+      left: 7rem;
+    }
+    .bar-03 {
+      left: 10rem;
+    }
+    .bar-04 {
+      left: -5rem;
+    }
+    .bar-05 {
+      left: 2rem;
+    }
+  }
+  .bar-01 {
+    top: 0;
+    width: 45rem;
+  }
+  .bar-02 {
+    top: 3.75rem;
+    width: 20rem;
+    z-index: 2;
+  }
+  .bar-03 {
+    top: 7.5rem;
+    width: 28.75rem;
+    z-index: 2;
+  }
+  .bar-04 {
+    top: 3.75rem;
+    width: 60rem;
+    z-index: 1;
+  }
+  .bar-05 {
+    top: 7.5rem;
+    width: 48.75rem;
+    z-index: 1;
+  }
+}
+
+.bars-iris {
+  .bar-01 {
+    background-color: rgba(19, 180, 209, 1);
+    animation: float_1 11s ease-in-out infinite;
+  }
+  .bar-02 {
+    background-color: rgba(19, 180, 209, .7);
+    animation: float_2 13s ease-in-out infinite;
+  }
+  .bar-03 {
+    background-color: rgba(19, 180, 209, .5);
+    animation: float_1 15s ease-in-out infinite;
+  }
+  .bar-04 {
+    background-color: rgba(19, 180, 209, .3);
+    animation: float_2 16s ease-in-out infinite;
+  }
+  .bar-05 {
+    background-color: rgba(19, 180, 209, .2);
+    z-index: 1;
+    animation: float_1 15s ease-in-out infinite;
+  }
+}
+
+.bars-ruby {
+  .bar-01 {
+    background-color: rgba(201, 18, 99, 1);
+    animation: float_1 11s ease-in-out infinite;
+  }
+  .bar-02 {
+    background-color: rgba(201, 18, 99, .7);
+    animation: float_2 13s ease-in-out infinite;
+  }
+  .bar-03 {
+    background-color: rgba(201, 18, 99, .5);
+    animation: float_1 15s ease-in-out infinite;
+  }
+  .bar-04 {
+    background-color: rgba(201, 18, 99, .3);
+    animation: float_2 16s ease-in-out infinite;
+  }
+  .bar-05 {
+    background-color: rgba(201, 18, 99, .2);
+    z-index: 1;
+    animation: float_1 15s ease-in-out infinite;
+  }
+}
+
+.bars-yonder {
+  .bar-01 {
+    background-color: rgba(84, 125, 173, 1);
+    animation: float_1 11s ease-in-out infinite;
+  }
+  .bar-02 {
+    background-color: rgba(84, 125, 173, .7);
+    animation: float_2 13s ease-in-out infinite;
+  }
+  .bar-03 {
+    background-color: rgba(84, 125, 173, .5);
+    animation: float_1 15s ease-in-out infinite;
+  }
+  .bar-04 {
+    background-color: rgba(84, 125, 173, .3);
+    animation: float_2 16s ease-in-out infinite;
+  }
+  .bar-05 {
+    background-color: rgba(84, 125, 173, .2);
+    z-index: 1;
+    animation: float_1 15s ease-in-out infinite;
+  }
+}
+
+#audition-intro {
+  .aud-1 {
+    animation: float_1 15s ease-in-out infinite;
+  }
+  .aud-3 {
+    animation: float_1 20s ease-in-out infinite;
+  }
+  .aud-2 {
+    animation: float_2 25s ease-in-out infinite;
+  }
+}
+
+@keyframes float_1 {
+  0% { transform: translateY(0) }
+  33.33333% { transform: translateX(-40px) }
+  66.66667% { transform: translateX(0) }
+  100% { transform: translateY(0) }
+}
+
+@keyframes float_2 {
+  0% { transform: translateY(0) }
+  33.33333% { transform: translateX(30px) }
+  66.66667% { transform: translateX(0) }
+  100% { transform: translateY(0) }
+}

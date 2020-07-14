@@ -1,0 +1,101 @@
+#main-footer {
+  background-color: $charcoal;
+  min-height: 10rem;
+  position: relative;
+  color: $white;
+  @include pb-5;
+  &:before {
+    content: "";
+    background-image: url('~static/waves_footer.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -308px;
+    height: 308px;
+  }
+  .navbar {
+    border-top: 1px solid rgba(255,255,255,.2);
+    font-size: 15px;
+    @extend .pr-0;
+    @extend .pl-0;
+    @extend .mt-5;
+    .nav-item {
+      &:last-child > a {
+        @extend .pr-0;
+      }
+      .nav-link {
+        color: $white;
+        text-transform: lowercase;
+      }
+    }
+  }
+  .flexme {
+    a {
+      color: $white;
+    }
+  }
+  #footer-rights {
+    margin-top: 0.9rem;
+    li:first-child {
+      margin-right: 4rem;
+    }
+    img {
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+//
+// Responsive
+// -----------------------------------------
+@include media-breakpoint-down(md) {
+  .container {
+    .flexme {
+      > .btn {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  #main-footer {
+    #footer-rights {
+      margin: 1rem auto 0;
+      .list-inline-item {
+        display: inherit;
+        text-align: center;
+        margin: auto !important;
+        &:last-child {
+          margin: .5rem auto 1rem auto !important;
+        }
+      }
+    }
+    .nav {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 100%;
+      justify-content: center;
+    }
+    .container {
+      text-align: center;
+    }
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  #main-footer {
+    #footer-rights {
+      margin: 1rem auto 0 0;
+      .list-inline-item {
+        &:first-child {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

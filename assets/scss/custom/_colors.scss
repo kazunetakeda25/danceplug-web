@@ -1,0 +1,69 @@
+//
+// Primary Colors
+// -----------------------------------------
+$white:     #FFFFFF !default;
+$charcoal:  #494949 !default;
+$iris:      #13B4D1 !default;
+$ruby:      #C91263 !default;
+$yonder:    #547DAD !default;
+$plum:      #8C3E7F !default;
+$gray:      #808080 !default;
+
+//
+// BG Colors
+// -----------------------------------------
+.bg-plum {
+  background-color: $plum;
+}
+
+.bg-ruby {
+  background-color: $ruby;
+}
+
+//
+// Gradients - top left to bottom right
+// -----------------------------------------
+@mixin iris-ruby {
+  background: rgb(19,180,209);
+  background: linear-gradient(135deg, rgba(19,180,209,1) 0%, rgba(201,18,99,1) 100%);
+}
+
+.iris-ruby {
+  @include iris-ruby
+}
+   
+@mixin iris-yonder {
+  background: rgb(19,180,209);
+  background: linear-gradient(135deg, rgba(19,180,209,1) 0%, rgba(84,125,173,1) 100%);
+}
+
+.iris-yonder {
+  @include iris-yonder
+}
+
+@mixin ruby-plum {
+  background: rgb(201,18,99);
+  background: linear-gradient(135deg, rgba(201,18,99,1) 0%, rgba(140,62,127,1) 100%);
+}
+
+.ruby-plum {
+  @include ruby-plum
+}
+
+@mixin plum-ruby {
+  background: rgb(140,62,127);
+  background: linear-gradient(135deg, rgba(140,62,127,1) 0%, rgba(201,18,99,1) 100%);
+}
+
+.plum-ruby {
+  @include plum-ruby
+}
+
+@mixin yonder-plum {
+  background: rgb(84,125,173);
+  background: linear-gradient(135deg, rgba(84,125,173,1) 0%, rgba(140,62,127,1) 100%);
+}
+
+.yonder-plum {
+  @include yonder-plum
+}

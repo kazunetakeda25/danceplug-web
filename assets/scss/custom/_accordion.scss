@@ -1,0 +1,48 @@
+//
+// Simple accordion
+// -----------------------------------------
+.accordion-simple {
+  .card {
+    background-color: transparent;
+    border: none;
+    @extend .m-0;
+    .card-header {
+      background-color: transparent;
+      border-radius: 0;
+      @extend .p-0;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+    .btn {
+      background-color: transparent;
+      color: inherit;
+      border: none;
+      border-bottom: 1px solid $white;
+      border-radius: 0;
+      text-align: left;
+      box-shadow: none !important;
+      text-transform: inherit;
+      padding: 3.2rem 0;
+      &:hover,
+      &:focus,
+      &:active {
+        transform: none;
+        background-color: transparent;
+        border-bottom: 1px solid $white;
+      }
+      .display-3 {
+        color: $white;
+        @extend .mtb-0;
+      }
+    }
+    &:last-child {
+      .btn {
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.avatar {
+	color: $white;
+	background-color: $gray-500;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	border-radius: 50%;
+	height: 48px;
+	width: 48px; 
+} 
+
+.avatar img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.avatar + .avatar-content {
+	display: inline-block;
+	margin-left: .75rem;
+}
+.avatar-lg {
+	width: 58px;
+	height: 58px;
+	font-size: $font-size-sm;
+}
+
+.avatar-sm {
+	width: 38px;
+	height: 38px;
+	font-size: $font-size-sm;
+}
+
+//
+// Overlapped Avatars
+// -----------------------------------------
+.avatar-group {
+	.avatar {
+		position: relative;
+		z-index: 2;
+		border: 2px solid $card-bg;
+		
+		&:hover {
+			z-index: 3;
+		}
+	}
+
+	.avatar + .avatar {
+		margin-left: -1rem;
+		
+	}
+}
+
+//
+// Avatars
+// -----------------------------------------
+.avatar-sp {
+  justify-content: center;
+  @extend .row;
+  picture {
+    margin: auto;
+    width: 12rem;
+    img {
+      width: 12rem;
+    }
+  }
+}
+
+.cols-avatar {
+  &.picture-rounded-circle {
+    picture {
+      border-radius: 50%;
+      border: solid .6rem;
+      color: $yonder;
+      background-color: $yonder;
+      display: block;
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+        -webkit-user-drag: none;
+        filter: grayscale(0.9) sepia(0.2) brightness(0.85) contrast(1.45);
+        transition: 0.3s;
+        position: relative;
+        top: .6rem;
+        right: .6rem;
+        &:hover {
+          filter: none;
+        }
+      }
+    }
+  }
+}
+
+.col-avatar {
+  [class*='col-'] {
+    @include mb-6;
+    text-align: center;
+    h4 {
+      @extend .mb-2;
+    }
+  }
+}
+
+.col2-ti {
+  @extend .align-items-center;
+  @extend .h-100;
+  @extend .text-center;
+  @extend .no-gutters;
+  .display-2 {
+    @extend .m-0;
+    line-height: 1;
+  }
+  > div {
+    max-height: 30rem;
+  }
+}

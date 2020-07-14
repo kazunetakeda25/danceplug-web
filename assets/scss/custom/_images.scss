@@ -1,0 +1,206 @@
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+}
+
+picture > img {
+  @extend .img-fluid;
+  width: 100%;
+}
+
+.rounded-circle {
+  border: 10px solid $yonder;
+}
+
+#main-content {
+  #page-header {
+    overflow: hidden;
+    position: relative;
+    &:after {
+      content: '';
+      background-image: url('~static/waves_header.svg');
+      background-repeat: no-repeat;
+      background-position: 50%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 304px;
+    }
+    .hero {
+      @extend .h-90;
+      text-align: center;
+      overflow: visible;
+      height: 20rem;
+      
+      .display-1 {
+        @extend .ml-4;
+        @extend .mr-4;
+      }
+      picture {
+        width: 100%;
+        img {
+          object-position: center;
+          object-fit: cover;
+          width: 100%;
+          -webkit-user-drag: none;
+          min-height: 60vh;
+        }
+      }
+    }
+    &.home {
+      position: relative;
+      min-height: 93vh;
+      .hero {
+        height: 100vh !important;
+        .row {
+          height: 70%;
+          color: $white;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          .display-1 {
+            font-family: 'Raleway';
+            font-weight: 100;
+            font-style: normal;
+            text-transform: uppercase;
+            text-align: left;
+            line-height: .72 !important;
+            @extend .mb-5;
+            span {
+              display: block;
+              font-weight: 600;
+            }
+          }
+          .lead {
+            text-align: right;
+            @extend .ml-auto;
+          }
+        }
+        picture {
+          img {
+            position: relative;
+            min-height: 100vh;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.adblock {
+  img {
+    @extend .img-fluid;
+    display: none;
+    @extend .mb-5;
+    margin: auto;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  #main-content {
+    #page-header {
+      height: 38rem;
+      .hero {
+        picture {
+          img {
+            position: absolute;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #main-content {
+    #page-header {
+      &.home {
+        .hero {
+          .row {
+            .lead {
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+    .adblock .ad-up {
+      display: block;
+    }
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  #main-content {
+    #page-header {
+      min-height: 35vh;
+      .hero {
+        picture {
+          img {
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only(md) {
+  #main-content {
+    #page-header {
+      .hero {
+        picture {
+          img {
+            min-height: 60vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  #main-content {
+    #page-header {
+      .hero {
+        picture {
+          img {
+            min-height: 65vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only(xl) {
+  #main-content {
+    #page-header {
+      .hero {
+        picture {
+          img {
+            margin: auto;
+            min-height: 70vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  #main-content {
+    #page-header {
+      height: 30rem;
+    }
+    .adblock .ad-down {
+      display: block;
+    }
+  }
+}

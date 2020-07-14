@@ -1,0 +1,349 @@
+
+// Primary Headers
+// -----------------------------------------------------------------------------
+// H1                 Roboto Slab, Regular (400)      50px = 3.125rem
+// H2                 Roboto Slab, Medium (500)      30px = 1.875rem
+// H3                 Roboto Slab, Regular (400)     26px = 1.625rem     Grey
+// H4                 Roboto Slab, Medium (500)      22px = 1.375rem
+
+// Display Headers
+// -----------------------------------------------------------------------------
+// H1 Hero            Roboto Slab, ExtraLight (200)  100px = 6.25rem
+// H2                 Roboto Slab, Light (300)       80px = 5rem         CAPS
+// H3                 Roboto Slab, Regular (400)     50px = 3.125rem
+
+// Paragraphs
+// -----------------------------------------------------------------------------
+// Lead Paragraph     Roboto, Regular (400)          25px = 1.563rem
+// Base/Paragraph     Roboto, Regular (400)          18px = 1.125rem
+// Small              Roboto, Regular (400)          15px = 0.938rem
+// Small              Roboto, Italic (400)           15px = 0.938rem
+// Footnote           Roboto, Italic (400)           15px = 0.938rem     Grey
+
+// Other
+// -----------------------------------------------------------------------------
+// Large Quote        Raleway, Light Italic (300)    30px = 1.875rem     Grey
+// Quote              Raleway, Light Italic (300)    26px = 1.625rem     Grey
+// Menu               Roboto, Regular (400)          16px = 0.8889rem    CAPS
+// Label              Roboto, Regular (400)          15px = 0.938rem     Plum
+// Button             Roboto, Regular (400)          20px = 1.111rem     CAPS
+
+$line-height-sm: calc(1.5em + 0.6 * ((100vw - 20em) / 60));
+$line-height-base: calc(1.3em + 0.3 * ((100vw - 20em) / 60));
+$line-height-md: calc(1.2em + 0.6 * ((100vw - 20em) / 60));
+$line-height-lg: calc(1em + 0.6 * ((100vw - 20em) / 60));
+
+body {
+  line-height: $line-height-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+.lead,
+blockquote {
+  line-height: $line-height-base;
+}
+
+h2,
+h4 {
+  font-weight: $font-weight-normal5;
+}
+
+h1 {
+  @include font-size(3.125rem);
+  line-height: $line-height-md;
+  @extend .mtf-1;
+}
+
+h2 {
+  @include font-size(1.875rem);
+  @extend .mtf-5;
+  @extend .mbf-2;
+}
+
+h3 {
+  @include font-size(1.625rem);
+  color: $gray;
+  @extend .mtf-4;
+  @extend .mbf-2;
+}
+
+h4 {
+  @include font-size(1.222rem);
+  @extend .mtf-3;
+  @extend .mbf-1;
+}
+
+.display-1,
+.display-3 {
+  line-height: $line-height-base;
+}
+
+.display-2 {
+  line-height: $line-height-lg;
+}
+
+.display-1,
+.display-2,
+.display-3 {
+  @extend .mt-0;
+}
+
+.display-1,
+.display-2,
+.display-3,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Slab";
+}
+
+.display-1 {
+  color: $white;
+  font-weight: $font-weight-xlight;
+  @include font-size(6.25rem);
+  line-height: 1 !important;
+}
+
+.display-2 {
+  margin-bottom: $margin-btm-base;
+}
+
+.display-2 {
+  font-weight: $font-weight-light;
+  @include font-size(5rem);
+  text-transform: uppercase;
+  span {
+    display: block;
+  }
+}
+
+p {
+  @extend .mbf-3;
+}
+
+[class*='bg-'] {
+  .display-2 {
+    color: $white;
+  }
+}
+
+.display-3 {
+  font-weight: $font-weight-normal;
+  @include font-size(3.125rem);
+}
+
+.lead,
+#main-navbar,
+label,
+.label,
+button,
+.btn,
+small,
+sup,
+.footnote {
+  font-family: "Roboto";
+}
+
+.tax {
+  color: $plum;
+  text-transform: lowercase;
+}
+
+.credit {
+  @extend .mb-5;
+  span {
+    color: rgba($color: $charcoal, $alpha: .5);
+    font-style: normal;
+  }
+}
+
+button,
+.btn {
+  @include font-size(1.17rem);
+}
+
+.lead {
+  @include font-size(1.563rem);
+  text-align: center;
+}
+
+small,
+sup,
+.footnote,
+figcaption {
+  font-size: 0.9375rem;
+}
+
+sup,
+blockquote,
+figcaption,
+.read {
+  font-style: italic;
+}
+
+sup,
+blockquote.lg,
+figcaption {
+  color: $gray;
+}
+
+figcaption {
+  @extend .mt-2;
+}
+
+blockquote {
+  @extend .pl-4;
+  @extend .mtb-3;
+  font-family: $font-family-alt;
+  @include font-size(1.625rem);
+  border-left: 5px solid rgba(0,0,0,.2);
+}
+
+.footnote {
+  position: relative;
+  z-index: 3;
+  color: $gray;
+  font-style: italic;
+  &.light {
+    color: $gray;
+  }
+}
+
+blockquote,
+blockquote.lg {
+  font-weight: $font-weight-light;
+}
+
+blockquote.lg {
+  @include font-size(1.875rem);
+}
+
+figure {
+  @include mtb-2;
+  @extend .text-center;
+}
+
+.text-white {
+  .display-1,
+  .display-2,
+  .display-3,
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $white;
+  }
+}
+
+//
+// Responsive
+// -----------------------------------------
+@include media-breakpoint-down(md) {
+  .display-1 {
+    line-height: 1.1;
+  }
+  .lead {
+    @include font-size(1.3rem);
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  body {
+    @include font-size(1rem);
+    line-height: $line-height-sm;
+  }
+  blockquote {
+    line-height: $line-height-sm;
+  }
+  button,
+  .btn {
+    @include font-size(1rem);
+  }
+  .content-info {
+    .d-flex {
+      display: inherit !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .content-info {
+    .d-flex {
+      display: inherit !important;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .display-2 {
+    span {
+      position: relative;
+      &.first {
+        padding-left: 20%;
+        text-align: left;
+        left: -20px;
+      }
+      &.last {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  body {
+    line-height: 1.7;
+  }
+  h1 {
+    line-height: 1.3em;
+  }
+  h2,
+  h3,
+  h4,
+  .lead,
+  blockquote {
+    line-height: 1.4em;
+  }
+  .display-1,
+  .display-2,
+  .display-3 {
+    line-height: 1.1em;
+  }
+  .display-2 {
+    margin-bottom: 5rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .display-1 {
+    @include font-size(5rem);
+  }
+  .display-2 {
+    @include font-size(4rem);
+  }
+  .display-3 {
+    @include font-size(3rem);
+  }
+}
+
+.vld-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+}
+
+.vue-go-top {
+  background-color: rgb(19, 180, 209) !important;
+  bottom: calc(50px) !important;
+}

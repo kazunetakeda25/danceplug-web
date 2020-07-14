@@ -1,0 +1,13 @@
+@mixin icon-shape-variant($color) {
+  color: saturate(darken($color, 10%), 10);
+  background-color: transparentize(lighten($color, 10%), .5);
+}
+
+@mixin nav-icon {
+  position: relative;
+  top: .4rem;
+  font-family: $icomoon-font-family;
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+}

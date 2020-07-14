@@ -1,0 +1,52 @@
+// Height values in vh
+.h-100vh {
+	height: 100vh !important;
+}
+
+.h-90 {
+  height: 90%;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-70 {
+  height: 70%;
+}
+
+.h-60 {
+  height: 60%;
+}
+
+.h-40 {
+  height: 40%;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+// Top/bottom border radius
+$border-radius-sm: calc(1.2rem - .5rem);
+$border-radius-sm-top: calc(1.2rem - .5rem) calc(1.2rem - .5rem) 0 0;
+$border-radius-sm-btm: 0 0 calc(1.2rem - .5rem) calc(1.2rem - .5rem);
+
+$border-radius-md: calc(2rem - .5rem);
+$border-radius-md-top: calc(2rem - .5rem) calc(2rem - .5rem) 0 0;
+$border-radius-md-btm: 0 0 calc(2rem - .5rem) calc(2rem - .5rem);
+
+$border-radius-lg: calc(3rem - .5rem);
+$border-radius-lg-top: calc(3rem - .5rem) calc(3rem - .5rem) 0 0;
+$border-radius-lg-btm: 0 0 calc(3rem - .5rem) calc(3rem - .5rem);
+
+// Top right & bottom left border radius
+$border-radius-sm-top-rt-btm-lt: 0 calc(1.2rem - .5rem) 0 calc(1rem - .5rem);

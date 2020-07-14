@@ -1,0 +1,218 @@
+.card {
+  position: relative;
+  .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+  .card-body {
+    .card-title {
+      a {
+        color: $default;
+        &:hover,
+        &:active,
+        &:focus {
+          color: lighten($default, 10);
+        }
+      }
+    }
+  }
+  .card-blockquote {
+    padding: 2rem;
+    position: relative;
+
+    .svg-bg {
+      display: block;
+      width: 100%;
+      height: 95px;
+      position: absolute;
+      top: -94px;
+      left: 0;
+    }
+  }
+}
+
+//
+// Animated Cards
+// -----------------------------------------
+.card-lift--hover {
+  &:hover {
+    transform: translateY(-20px);
+    @include transition($transition-base);
+  }
+}
+
+.card {
+  border-radius: $border-radius-sm;
+  @extend .mb-5;
+  position: relative;
+  h2 {
+    @extend .mt-0;
+  }
+  .card-header,
+  .card-footer {
+    background-color: $white;
+    border: none;
+  }
+  .icon {
+    position: absolute;
+    z-index: 1;
+    &.flag {
+      top: 0;
+      right: 0;
+      background-color: $plum;
+      border-radius: $border-radius-sm-top-rt-btm-lt !important;
+    }
+    &.volume {
+      bottom: .4rem;
+      right: .4rem;
+      color: $white;
+      &.volume-on {
+        .icon-volume-off {
+          &:before {
+            content: "\e947";
+          }
+        }
+      }
+      &:hover {
+        color: rgba(255,255,255,.7);
+        cursor: pointer;
+      }
+    }
+    &:hover {
+      .icon-star {
+        cursor: pointer;
+        &:before {
+          content: "\e93f";
+        }
+      }
+    }
+  }
+  img,
+  video {
+    width: 100%;
+    border-radius: $border-radius-sm-top;
+    @extend .img-fluid;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .card-body {
+    font-size: 0.9375rem;
+    h4 {
+      @extend .mt-0;
+    }
+    .author {
+      @extend .mb-3;
+    }
+  }
+  .card-footer {
+    border-radius: $border-radius-sm-btm;
+  }
+}
+
+//
+// Content
+// -----------------------------------------
+.cpreview {
+  @extend .shadow;
+  .card-footer {
+    @extend .d-flex;
+    border-radius: $border-radius-sm-btm;
+    .read {
+      .icon {
+        left: -1.7rem;
+        bottom: .1rem;
+      }
+      position: relative;
+      @extend .ml-auto;
+    }
+  }
+}
+
+//
+// Prices
+// -----------------------------------------
+.prices {
+  .card {
+    @extend .shadow;
+    @extend .mb-5;
+    border-radius: calc(2rem - 1rem);
+    .card-header,
+    .card-footer {
+      border: none;
+    }
+    .card-header {
+      @extend .mt-3;
+      border-radius: calc(2rem - 1rem) calc(2rem - 1rem) 0 0;
+    }
+    .card-footer {
+      border-radius: 0 0 calc(2rem - 1rem) calc(2rem - 1rem);
+      @extend .mb-4;
+      .btn {
+        @extend .mt-3;
+      }
+    }
+    .card-body {
+      .price {
+        @include font-size(1.875rem);
+      }
+      .text-lg {
+        @include font-size(3.125rem);
+        line-height: 1;
+      }
+      small {
+        font-size: $font-size-base;
+      }
+    }
+  }
+  .row {
+    position: relative;
+    z-index: 1;
+    [class*="col-"] {
+      z-index: 1;
+    }
+  }
+  .bars {
+    bottom: -2rem;
+  }
+  .footnote {
+    display: block;
+    text-align: center;
+  }
+}
+
+//
+// Filter
+// -----------------------------------------
+.filter {
+  position: relative;
+  .filter-dropdown {
+    float: right;
+    color: $default;
+    &:hover,
+    &:active,
+    &:focus {
+      color: lighten($default, 10);
+    }
+    .icon {
+      position: relative;
+      top: .2rem;
+    }   
+  }
+  .filter-card {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin-top: 2.5rem;
+    @extend .shadow-lg;
+    .card-footer {
+      @extend .pt-0;
+    }
+    .btn-group {
+      @extend .btn-group-sm;
+    }
+  }
+}

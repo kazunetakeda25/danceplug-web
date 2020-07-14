@@ -1,0 +1,236 @@
+.mw-holder {
+  max-width: 62.5rem;
+}
+
+.content-holder {
+  position: relative;
+  @extend .pb-5;
+  .media-top {
+    iframe,
+    picture > img {
+      border-radius: 1rem 1rem 0 0;
+    }
+  }
+  header {
+    @extend .pt-3;
+    @extend .ml-5;
+    @extend .mr-5;
+    @extend .pb-4;
+    @extend .border-bottom;
+    .flag {
+      float: right;
+    }
+    .sumome-share-client-wrapper {
+      float: none !important;
+    }
+    h1.title {
+      @extend .mb-5;
+    }
+  }
+  .article-content {
+    @extend .pt-5;
+    .img-vert {
+      margin: auto;
+      max-width: 20rem;
+    }
+    .player {
+      @extend .embed-responsive;
+      @extend .mt-5;
+      @extend .mb-5;
+      &:before {
+        display: block;
+        content: "";
+        padding-top: 56.25%;
+      }
+      iframe {
+        @extend .embed-responsive-item;
+      }
+    }
+  }
+  .author-info {
+    @extend .mtb-5;
+    .sm {
+      @extend .mt-3;
+      @extend .mb-5;
+    }
+    h2 {
+      @extend .mtf-2;
+    }
+    picture {
+      img {
+        object-fit: cover;
+        border-radius: 50%;
+        -webkit-user-drag: none;
+      }
+    }
+  }
+  .article-author {
+    text-align: center;
+    @extend .border-top;
+    @extend .pt-5;
+  }
+  h2.border-top {
+    @extend .pt-5;
+  }
+  .top {
+    @extend .border-bottom;
+    @include pb-5;
+    h2 {
+      @extend .mt-0;
+    }
+    ul {
+      list-style: none;
+      @extend .pl-0;
+    }
+    .map-link {
+      .icon {
+        position: relative;
+        top: .2rem;
+      }
+    }
+  }
+}
+
+//
+// Profiles
+// -----------------------------------------
+.profile {
+  .content-holder {
+    .author-info {
+      @extend .mt-0;
+      text-align: center;
+      .avatar-sp {
+        position: relative;
+        margin-bottom: 3rem;
+        .cols-avatar {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -10rem;
+          picture {
+            border: none;
+            background-color: transparent;
+            color: transparent;
+            img {
+              top: 0;
+              left: 0;
+              border: solid .6rem $white;
+            }
+          }
+        }
+      }
+      .sm {
+        @extend .mb-0;
+      }
+    }
+    #gallery,
+    #videos {
+      .item-list {
+        .list-group-item {
+          border: none;
+          padding: 0;
+          margin-bottom: 1.5rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    #videos {
+      .item-list {
+        .list-group-item {
+          @extend .embed-responsive;
+          @extend .embed-responsive-16by9;
+        }
+      }
+    }
+  }
+}
+
+//
+// Responsive
+// -----------------------------------------
+@include media-breakpoint-up(sm) {
+  .content-holder {
+    border-radius: 1rem;
+    box-shadow: $box-shadow !important;
+    background-color: $white;
+    position: relative;
+    z-index: 3;
+    &.has-hero {
+      margin: -15rem 1rem 0;
+    }
+  }
+  .profile {
+    .content-holder {
+      margin: -15rem 1rem 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .content-holder {
+    .top {
+      h2.border-top {
+        border: none !important;
+        padding-top: 0 !important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .content-holder {
+    margin-top: -5rem;
+    header {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+  .hero-hide {
+    .content-holder {
+      .article-content,
+      .content-info {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .col2-ti {
+    .display-2 {
+      margin-top: 5rem !important;
+      margin-bottom: 5rem !important;
+    }
+  }
+  .hero-hide {
+    padding-left: 0;
+    padding-right: 0;
+    .content-holder {
+      border-radius: 1rem;
+      background-color: $white;
+      position: relative;
+      z-index: 3;
+      .embed-responsive {
+        iframe {
+          border-radius: 0;
+        }
+      }
+      &.has-hero {
+        margin: -15rem 0 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .content-holder {
+    .top {
+      ul:first-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

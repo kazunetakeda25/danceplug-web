@@ -1,0 +1,22 @@
+import Vue from 'vue';
+import Vuex from 'vuex';
+import VueMeta from 'vue-meta';
+import VueParallaxJs from 'vue-parallax-js';
+import AppHeader from '@/components/AppHeader';
+import Intro from '@/assets/components/Intro';
+import Card from '@/assets/components/Card';
+import Icon from '@/assets/components/Icon';
+import IconSocial from '@/assets/components/IconSocial';
+import Paginator from '@/assets/components/Paginator';
+import PageNotFound404 from '@/assets/components/PageNotFound404';
+
+Vue.component('AppHeader', AppHeader);
+Vue.component('Intro', Intro);
+Vue.component('Card', Card);
+Vue.component('Icon', Icon);
+Vue.component('IconSocial', IconSocial);
+Vue.component('Paginator', Paginator);
+Vue.component('PageNotFound404', PageNotFound404);
+Vue.use(Vuex);
+Vue.use(VueMeta);
+Vue.use(VueParallaxJs);
